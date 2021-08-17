@@ -5,7 +5,7 @@ const init = async () => {
   const server = Hapi.server({ // Membuat Hapi server
     // Server Options
     port: 4444,
-    host: 'localhost',
+    host: 'localhost', // process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0' | digunakan ketika memakai AWS EC2
     routes: {
       cors: {
         origin: ['*']
